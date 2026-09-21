@@ -84,11 +84,10 @@ class TenureOptimization(BaseModel):
 # --- Request & Response Models ---
 
 class RecommendRequest(BaseModel):
-    amount: float
-    target_months: int
+    amount: float = Field(gt=0)
+    target_months: int = Field(ge=1, le=60)
     goal: str  # "safe_deposit", "safe", "better_return", "need_liquidity"
     liquidity_preference: str  # "high", "balanced", "can_lock_longer"
-
 
 class RecommendResponse(BaseModel):
     best_match: Optional[RecommendationItem] = None
