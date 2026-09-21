@@ -26,6 +26,10 @@ export interface RecommendationItem {
   estimated_maturity_amount: number;
   estimated_interest_earned: number;
   score: number;
+  tenure_fit_score: number;
+  yield_score: number;
+  liquidity_fit_score: number;
+  goal_alignment_score: number;
   reasons: string[];
   liquidity_level: string;
   conditions: string;

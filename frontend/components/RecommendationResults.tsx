@@ -103,9 +103,13 @@ export const RecommendationResults: React.FC<Props> = ({
               </span>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col items-end gap-1">
             <span className="text-xs font-bold bg-white/15 px-3 py-1 rounded-full border border-white/20">
               Score: {best_match.score} / 100
+            </span>
+            <span className="text-2xs text-finopt-200">
+              Tenure {best_match.tenure_fit_score}/30 · Yield {best_match.yield_score}/35 ·
+              Liquidity {best_match.liquidity_fit_score}/20 · Goal {best_match.goal_alignment_score}/15
             </span>
           </div>
         </div>

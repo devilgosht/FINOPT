@@ -139,6 +139,12 @@ def score_and_explain_option(
         estimated_maturity_amount=calc.estimated_maturity_amount,
         estimated_interest_earned=calc.estimated_interest_earned,
         score=total_score,
+
+        tenure_fit_score=tenure_score,
+        yield_score=rate_score,
+        liquidity_fit_score=liquidity_score,
+        goal_alignment_score=goal_score,
+
         reasons=reasons,
         liquidity_level=product.liquidity_level,
         conditions=product.conditions,

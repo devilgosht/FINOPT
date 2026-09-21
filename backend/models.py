@@ -49,6 +49,12 @@ class RecommendationItem(BaseModel):
     estimated_maturity_amount: float
     estimated_interest_earned: float
     score: float
+
+    tenure_fit_score: float = 0.0
+    yield_score: float = 0.0
+    liquidity_fit_score: float = 0.0
+    goal_alignment_score: float = 0.0
+
     reasons: List[str]
     liquidity_level: str
     conditions: str
